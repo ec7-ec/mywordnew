@@ -1,0 +1,199 @@
+@import "tailwindcss";
+
+@layer utilities {
+  .font-pixel {
+    font-family: 'Pixelify Sans', 'Silkscreen', 'Press Start 2P', monospace;
+  }
+  .font-mc-title {
+    font-family: 'ZCOOL KuaiLe', 'Press Start 2P', cursive, sans-serif;
+  }
+}
+
+/* Custom Minecraft Style Styling */
+:root {
+  --mc-gui-bg-light: #e2e8f0;
+  --mc-gui-bg-dark: #1f1f23;
+  --mc-border-light: #ffffff;
+  --mc-border-dark: #373737;
+  --mc-accent-green: #55ff55;
+  --mc-accent-gold: #ffaa00;
+  --mc-accent-diamond: #55ffff;
+}
+
+/* Day Mode Body Defaults */
+body {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+html:not(.dark) body {
+  background-color: #60a5fa;
+  color: #0f172a;
+}
+
+.dark body {
+  background-color: #0c0c0e;
+  color: #e0e0e0;
+}
+
+/* Pixelated rendering */
+.pixelated {
+  image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: crisp-edges;
+}
+
+/* Text shadow like in Minecraft */
+.mc-text-shadow {
+  text-shadow: 2px 2px 0px #000000;
+}
+
+.mc-text-shadow-sm {
+  text-shadow: 1px 1px 0px #000000;
+}
+
+.mc-text-shadow-light {
+  text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.4);
+}
+
+/* Minecraft GUI Panel - Classic Light (Oak/Stone GUI) */
+.mc-panel-light {
+  background-color: #c6c6c6;
+  border-top: 4px solid #ffffff;
+  border-left: 4px solid #ffffff;
+  border-right: 4px solid #555555;
+  border-bottom: 4px solid #555555;
+  box-shadow: inset -4px -4px 0px #373737, inset 4px 4px 0px #dbdbdb;
+  color: #202020;
+}
+
+/* Minecraft GUI Panel - Dark Mode (Deepslate/Obsidian) */
+.mc-panel-dark {
+  background-color: #1e1e24;
+  border-top: 4px solid #3c3c46;
+  border-left: 4px solid #3c3c46;
+  border-right: 4px solid #0f0f12;
+  border-bottom: 4px solid #0f0f12;
+  box-shadow: inset -4px -4px 0px #08080a, inset 4px 4px 0px #2a2a33;
+  color: #e0e0e0;
+}
+
+/* Minecraft Inventory Slot */
+.mc-slot {
+  background-color: #8b8b8b;
+  border-top: 3px solid #373737;
+  border-left: 3px solid #373737;
+  border-right: 3px solid #ffffff;
+  border-bottom: 3px solid #ffffff;
+  box-shadow: inset 2px 2px 0px #000000;
+}
+
+.dark .mc-slot {
+  background-color: #141418;
+  border-top: 3px solid #000000;
+  border-left: 3px solid #000000;
+  border-right: 3px solid #383842;
+  border-bottom: 3px solid #383842;
+}
+
+/* Minecraft Button Base */
+.mc-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Pixelify Sans', 'Silkscreen', 'Press Start 2P', monospace;
+  font-weight: 700;
+  background-color: #999999;
+  border-top: 4px solid #e0e0e0;
+  border-left: 4px solid #e0e0e0;
+  border-right: 4px solid #3c3c3c;
+  border-bottom: 4px solid #3c3c3c;
+  box-shadow: inset -4px -4px 0px #2b2b2b, inset 4px 4px 0px #b5b5b5;
+  color: #ffffff;
+  text-shadow: 2px 2px 0px #000000;
+  padding: 8px 16px;
+  cursor: pointer;
+  user-select: none;
+  transition: filter 0.1s, transform 0.05s;
+}
+
+.mc-btn:hover {
+  background-color: #a8a8a8;
+  filter: brightness(1.1);
+}
+
+.mc-btn:active {
+  border-top: 4px solid #3c3c3c;
+  border-left: 4px solid #3c3c3c;
+  border-right: 4px solid #e0e0e0;
+  border-bottom: 4px solid #e0e0e0;
+  box-shadow: inset 4px 4px 0px #2b2b2b, inset -4px -4px 0px #b5b5b5;
+  transform: translateY(2px);
+}
+
+/* Primary Green Emerald Button */
+.mc-btn-primary {
+  background-color: #2e8b2e;
+  border-top-color: #55ff55;
+  border-left-color: #55ff55;
+  border-right-color: #144714;
+  border-bottom-color: #144714;
+  box-shadow: inset -4px -4px 0px #0f330f, inset 4px 4px 0px #3eb83e;
+}
+
+.mc-btn-primary:hover {
+  background-color: #38a338;
+}
+
+/* Gold Shop Button */
+.mc-btn-gold {
+  background-color: #cc8800;
+  border-top-color: #ffcc00;
+  border-left-color: #ffcc00;
+  border-right-color: #664400;
+  border-bottom-color: #664400;
+  box-shadow: inset -4px -4px 0px #442d00, inset 4px 4px 0px #e69900;
+}
+
+/* Diamond Blue Button */
+.mc-btn-diamond {
+  background-color: #2b8080;
+  border-top-color: #55ffff;
+  border-left-color: #55ffff;
+  border-right-color: #0f4040;
+  border-bottom-color: #0f4040;
+  box-shadow: inset -4px -4px 0px #0a2b2b, inset 4px 4px 0px #38a3a3;
+}
+
+/* Redstone Danger Button */
+.mc-btn-danger {
+  background-color: #aa0000;
+  border-top-color: #ff5555;
+  border-left-color: #ff5555;
+  border-right-color: #550000;
+  border-bottom-color: #550000;
+  box-shadow: inset -4px -4px 0px #330000, inset 4px 4px 0px #cc0000;
+}
+
+/* Pixelated Scrollbar */
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #141418;
+  border: 2px solid #282830;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #555566;
+  border-top: 2px solid #888899;
+  border-left: 2px solid #888899;
+  border-right: 2px solid #22222e;
+  border-bottom: 2px solid #22222e;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #777788;
+}
+

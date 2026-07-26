@@ -1,0 +1,6 @@
+{
+  "name": "我的世界学习计划表",
+  "description": "我的世界像素游戏风格的学习计划表，包含可定制方块人、升级系统、学习任务、金币商店、成就与统计图表及跨设备云同步。",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
